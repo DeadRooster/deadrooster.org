@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '~> 2.7.4'
 
 # This is a lightweight Jekyll theme we want to use.
 gem 'kids',

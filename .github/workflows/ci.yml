@@ -13,7 +13,7 @@ jobs:
           node-version: 14
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "2.7"
+          ruby-version: "3.0.2"
           bundler-cache: true
       - run: npm install -g @lhci/cli@0.8.x
       - run: make install build
