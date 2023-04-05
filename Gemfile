@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '~> 2.7.4'
 
 # This is a lightweight Jekyll theme we want to use.
 gem 'kids',
@@ -31,18 +30,12 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
 end
 
-# Windows and JRuby does not include zoneinfo files,
-# so bundle the tzinfo-data gem and associated library.
-install_if -> { RUBY_PLATFORM =~ /mingw|mswin|java/ } do
-  gem 'tzinfo', '~> 1.2'
-  gem 'tzinfo-data'
-end
-
-# Performance-booster for watching directories on Windows
-gem 'wdm', '~> 0.1.1', install_if: Gem.win_platform?
-
 # Ruby linter
 gem 'rubocop', require: false
 
 # Load environment variables
 gem 'dotenv'
+
+# Security Constraints
+# 📜 https://github.com/DeadRooster/deadrooster.org/security/dependabot/24
+gem 'activesupport', '>= 6.1.7.3', '< 7'
